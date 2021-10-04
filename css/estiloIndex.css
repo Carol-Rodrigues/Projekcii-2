@@ -1,0 +1,119 @@
+/* Propriedades gerais da página */
+
+    body, html {
+        margin: 0;
+        font-family: 'Days One', sans-serif;
+        font-size: 1em;
+        color: #474747;
+        height: 100%;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: #2FB1A2;
+        text-align: center;
+    }
+    
+    p {
+        margin-bottom: 20px;
+    }
+/**/
+
+/* Complemento de estilização dos links no header */
+    nav#menu li {
+        font-size: 0.7em;
+    }
+/**/
+
+/* Estilização das sessões de texto */
+    .quem-somos, .nome, .nossos-produtos {
+        color: #474747;
+        background-color: white;
+        text-align: justify;
+        padding: 50px 80px;
+    }
+/**/
+
+/* Estilização dos subtítulos de categorias, e links para a loja */
+    .subtitulo1, .link1 {
+        color: #06089D;
+    }
+    .subtitulo2, .link2 {
+        color: #F50025;
+    }
+    .subtitulo3, .link3 {
+        color: #28502E;
+    }
+/**/
+
+/* Nome da página que fica sobre a imagem inicial */
+    .texto {
+        position: absolute;
+        left: 35%;
+        top: 40%;
+        color: white;
+        font-size: 6em;
+        text-decoration: underline overline;
+        padding: 18px;
+        letter-spacing: 3px;
+    }
+/**/
+
+span {
+    font-style: italic;
+}
+
+/* Estilização dos ícones de redes sociais */
+    .logo {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+    }
+/**/
+
+/* Estilização dos links de acesso dentro da sessão Nossos Produtos */
+    .link1, .link2, .link3 {
+        text-decoration: underline overline;
+    }
+    .link1:hover {
+        font-size: 130%;
+    }
+    .link2:hover {
+        font-size: 130%;
+    }
+    .link3:hover {
+        font-size: 130%;
+    }
+/**/
+
+/* Efeito Parallax: imagens */
+    .img1, .img2, .img3, .img4, .img5 {
+        height: 100%;
+        opacity: 70%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative; /*Para que funcione a sobreposição com o texto, que está em posição absoluta*/
+    }
+
+    .img2 {
+        background-image: url(../imagens/banner-estelar.jpg);
+    }
+
+    .img4 {
+        background-image: url(../imagens/banner-festa.jpg);
+    }
+
+    .img3 {
+        background-image: url(../imagens/banner-filme.jpg);
+    }
+
+    .img1 {
+        background-image: url(../imagens/banner-inicio.jpg);
+    }
+
+    .img5 {
+        background-image: url(../imagens/banner-final.jpg);
+    }
+/**/

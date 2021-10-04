@@ -1,0 +1,51 @@
+@media (max-width: 650px) {
+    footer>p {
+        font-size: 10px;
+    }
+    header {
+        height: 100px;
+        background-position: 30% 65%;
+    }
+    h1 {
+        font-size: 5vh;
+        padding-top: 50px;
+        padding-right: 15px;
+    }
+    nav {
+        font-size: 14px;
+    }
+    #main-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        row-gap: 1em;
+        margin-top: 0;
+    }
+    li {
+        font-size: 10px;
+    }
+    button {
+        font-size: 10px;
+        height: 15px;
+    }
+    td>label {
+        font-size: 12px;
+    }
+    #card_name {
+        width: 100%;
+    }
+    #card_number {
+        width: 55%;
+    }
+    #card_cpf {
+        width: 67%;
+    }
+    #card_banner {
+        width: 50%;
+    }
+    #address4, #address5, #address6 {
+        width: 80%;
+    }
+    .cadastro img, .pedido img, .entrega img {
+    width: 50px;
+    height: 50px;
+    }
+}

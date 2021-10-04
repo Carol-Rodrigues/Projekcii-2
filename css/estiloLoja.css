@@ -1,0 +1,170 @@
+/* Estilos gerais da página */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        font-size: 0.7em;
+    }
+/**/
+
+/* Criando os flex containers por sessões */
+
+    /* Sessão: projetores de estrela */
+    #section1 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Sessão: projetores de festa */
+    #section2 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Sessão: projetores de filme */
+    #section3 {
+        display: flex;
+        justify-content: space-around;
+    }
+/**/
+
+/* Estilizando os produtos */
+
+    /* Nome do produto: fonte, localização e peso */
+    figcaption {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 3px;
+        font-weight: 500;
+    }
+
+    /* Qtd do produto: estilização do tamanho da caixa de input; alinhamento do texto. Implementação do hover para alterar a formatação da letra e cor de fundo ao clicar. */
+    input {
+        width: 10%;
+        text-align: center;
+        display: inline-block;
+    }
+    input:hover {
+        font-weight: bold;
+        color: #28502E;
+        background-color: #E9C46A4D;
+    }
+
+    /* Valor do produto: fonte (cor, tamanho, alinhamento). Utilização do display e float para alinhamento do texto com a imagem. */
+    h4 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #2A9D8F;
+        font-size: large;
+        display: table-cell;
+        float: left;
+        margin-top: -2px;
+        margin-right: 120px;
+        margin-bottom: 10px;
+    }
+
+    /* Avaliações: utilização do display e float para alinhamento da imagem de avaliação com o texto do valor. */
+    .avaliacao {
+        display: table-cell;
+        float: left;
+    }
+
+    /* Ajustando quebra de linha após o alinhamento valor/avaliação. */
+    div {
+        clear: both;
+        text-align: center;
+    }
+
+    /* Botões de compra */
+        button {
+            border-radius: 10px; /*Borda arredondada*/
+            height: 25px; /*Altura*/
+            margin-top: 10px; /*Alinhamento*/
+            width: 70%; /*Tamanho*/
+        }
+        .linkFilme, .linkFesta, .linkEstrela {
+            color: #2A9D8F; /*Cor da fonte*/
+        }
+        .botFilme, .botFesta, .botEstrela {
+            background: linear-gradient(to bottom, #F5F4F6, #EAE9EC); /*Utilização de coloração gradiente para trazer efeito 3D*/
+        }
+    /**/
+
+    a {
+        text-decoration: none; /*Tirar o sublinhado do texto*/
+        font-weight: bold; /*Peso da fonte*/
+        font-size: 1em; /*Tamanho da fonte*/
+    }
+
+    /* Estilização dos "quadros" em que ficam cada um dos itens */
+        figure {        
+            border: 4px transparent;
+            border-style: groove;
+            border-radius: 10px;
+        }
+        .figFilme {
+            box-shadow: 2px 2px 2px 2px #28502E;
+        }
+        .figFesta {
+            box-shadow: 2px 2px 2px 2px #FF4763;
+        }
+        .figEstrela {
+            box-shadow: 2px 2px 2px 2px #06089D;
+        }
+    /**/
+
+    /* Fotos dos produtos: arredondamento da borda e alinhamento da foto */
+    img {
+        border-radius: 10px;
+    }
+    img, figcaption, h4, div {
+        margin-bottom: 5px;
+    }
+
+/**/
+
+/* Categorias de produtos */
+
+    /* Estilização do banner */
+    /* Alinhamento e tamanho */
+    #estelar, #festa, #filme {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 13px;
+    }
+
+    /*Imagem de fundo das categorias*/
+    #estelar {
+        margin-top: 0;
+        background-image: url(../imagens/banner-estelar.jpg);
+        background-position: 70% 72%; /*Seleção de qual parte da imagem irá aparecer*/    
+        height: 100px;
+        background-size: cover; /*Ocupar toda a página (a imagem é menor que o width)*/
+        width: 100%;
+    }
+    #festa {
+        background-image: url(../imagens/banner-festa.jpg);
+        background-position: 50% 38%; /*Seleção de qual parte da imagem irá aparecer*/
+        height: 100px;
+        background-size: cover; /*Ocupar toda a página (a imagem é menor que o width)*/
+        width: 100%;
+    }
+    #filme {        
+        background-image: url(../imagens/banner-filme.jpg);
+        background-position: 90% 30%; /*Seleção de qual parte da imagem irá aparecer*/
+        height: 100px;
+        background-size: cover; /*Ocupar toda a página (a imagem é menor que o width)*/
+        width: 100%;
+    }
+
+    /*Formatação do texto que está alinhado com a imagem*/
+    h2 {
+        color: #fff;
+        font-size: 7vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;        
+        text-align: center;
+        padding: 30px;
+        mix-blend-mode: overlay; /* Utilização do overlay para dar o efeito de sobreposição*/
+        box-sizing: border-box; /*Para que o padding não distorça o tamanho*/
+    }
+/**/

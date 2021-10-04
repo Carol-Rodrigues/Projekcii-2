@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Carrinho - Projekcii™</title>
+    <link rel="stylesheet" type="text/css" href="css/estiloCarrinho.css">
+    <link rel="stylesheet" type="text/css" href="css/menu-e-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/responsCarrinho.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="text-decoration: underline overline">Projekcii</h1>
+    </header>
+    <nav id="menu">                
+        <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="loja.html#estelar">Projetores Estelares</a></li>
+        <li><a href="loja.html#festa">Projetores de Festa</a></li>
+        <li><a href="loja.html#filme">Projetores de Filme</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="">
+            <div id="main-grid">
+                <!-- Abertura: criando o grid-item "cadastro" -->
+                <div class="grid-item cadastro">
+                    <!-- Abertura das informações de dados cadastrais -->
+                    <img src="imagens/perfil.png" alt="ícone de perfil">
+                    <fieldset id="dadosCadastrais">
+                        <legend>Dados cadastrais</legend>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" name="email" class="email" />
+                        <label for="password">Crie uma senha:</label>
+                        <input type="password" id="password" placeholder="Digite sua senha" name="password"
+                            class="senha" />
+                        <label for="password2">Repita sua senha:</label>
+                        <input type="password" id="password2" placeholder="Repita sua senha" name="password2"
+                            class="senha" />
+                    </fieldset>
+                    <!-- Encerramento das informações de dados cadastrais -->
+                    <!-- Abertura das informações de dados pessoais -->
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <label for="name">Nome completo:</label>
+                        <input type="text" id="name" placeholder="Nome e Sobrenome" name="name" />
+                        <label for="date">Data de nascimento:</label>
+                        <input type="date" id="date" name="date" class="date" />
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" placeholder="XXX.XXX.XXX-XX" name="cpf" />
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" placeholder="(XX) XXXXX-XXXX" name="phone" />
+                    </fieldset>
+                    <!-- Encerramento das informações de dados pessoais -->
+                </div>
+                <!-- Encerramento: grid-item "cadastro" -->
+                <!-- Abertura: criando o grid-item "pedido" -->
+                <div class="grid-item pedido">
+                    <img src="imagens/pedido.png" alt="ícone do pedido">
+                    <fieldset>
+                        <legend>Dados do pedido</legend>
+                        <fieldset>
+                            <legend id="sublegenda">Qual (is) item (ns) deseja comprar? </legend>
+                            <table>
+                                <tr id="tituloItem">
+                                    <td>
+                                        Projetores estelares:
+                                    </td>
+                                    <td>
+                                        Projetores de festa:
+                                    </td>
+                                    <td>
+                                        Projetores de filme:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="Star_id1">Astro Sky</label>
+                                        <input type="number" id="Star_id1" name="Astro_Sky" value="0" />
+                                    </td>
+                                    <td>
+                                        <label for="Party_id1">Rohs</label>
+                                        <input type="number" id="Party_id1" name="Rohs" value="0" />
+                                    </td>
+                                    <td>
+                                        <label for="Movie_id1">Mini Projetor LED</label>
+                                        <input type="number" id="Movie_id1" name="LED" value="0" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="Star_id2">HueLiv</label>
+                                        <input type="number" id="Star_id2" name="HueLiv" value="0" />
+                                    </td>
+                                    <td>
+                                        <label for="Party_id2">HL-69</label>
+                                        <input type="number" id="Party_id2" name="HL_69" value="0" />
+                                    </td>
+                                    <td>
+                                        <label for="Movie_id2">Docooler</label>
+                                        <input type="number" id="Movie_id2" name="Docooler" value="0" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="Star_id3">FITFORT</label>
+                                        <input type="number" id="Star_id3" name="FITFORT" value="0" />
+                                    </td>
+                                    <td>
+                                        <label for="Party_id3">Bola Maluca</label>
+                                        <input type="number" id="Party_id3" name="Bola_Maluca" value="0" />
+                                    </td>
+                                    <td>
+                                        <label for="Movie_id3">UC-28</label>
+                                        <input type="number" id="Movie_id3" name="UC_28" value="0" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                        <label for="gift"></label>
+                        <input type="checkbox" id="gift" name="gift" /><span id="presente">Clique aqui se deseja um
+                            embrulho
+                            especial para presente.</span>
+                        <span id="mensagem">Caso queira, digite uma recado especial para enviarmos junto ao
+                            presente:</span>
+                        <textarea name="giftbox" id="gift2"></textarea>
+                    </fieldset>
+                </div>
+                <!-- Encerramento: grid-item "pedido" -->
+                <!-- Abertura: criando o grid-item "entrega" -->
+                <div class="grid-item entrega">
+                    <!-- Abertura das informações de formas de pagamento -->
+                    <img src="imagens/envio.png" alt="ícone de envio">
+                    <fieldset>
+                        <legend>Pagamento</legend>
+                        <label for="payment1">Escolha a forma de pagamento:</label>
+                        <input type="radio" id="payment1" name="payment" />Cartão de Crédito
+                        <label for="payment2"></label>
+                        <input type="radio" id="payment2" name="payment" />Cartão de Débito
+                        <label for="payment3"></label>
+                        <input type="radio" id="payment3" name="payment" />Boleto Bancário
+                        <label for="payment4"></label>
+                        <input type="radio" id="payment4" name="payment" />PIX
+                        <fieldset id="cartao">
+                            <label for="card">Bandeira do cartão:</label>
+                            <select name="card_banner" id="card_banner">
+                                <option>Selecione:</option>
+                                <option value="VS">Visa</option>
+                                <option value="AE">American Express</option>
+                                <option value="MC">Mastercard</option>
+                                <option value="EL">Elo</option>
+                                <option value="HC">Hipercard</option>
+                                <option value="DN">Diners</option>
+                            </select>
+                            <label for="card_number">Número do cartão:</label>
+                            <input type="text" id="card_number" placeholder="XXXX XXXX XXXX XXXX" name="card_number" />
+                            <label for="card_name">Nome impresso no cartão:</label>
+                            <input type="text" id="card_name" placeholder="Nome como está no cartão" name="card_name" />
+                            <label for="card_cpf">CPF do titular:</label>
+                            <input type="text" id="card_cpf" name="card_cpf" placeholder="XXX.XXX.XXX-XX">
+                            <label for="card_date">Validade:</label>
+                            <input type="month" id="card_date" name="card_date">
+                            <label for="card_code">Código de segurança:</label>
+                            <input type="text" id="card_code" name="card_code" placeholder="XXX">
+                        </fieldset>
+                    </fieldset>
+                    <!-- Encerramento das informações de formas de pagamento -->
+                    <!-- Abertura das informações de dados de entrega -->
+                    <fieldset id="dadosEntrega">
+                        <legend>Dados de entrega</legend>
+                        <label for="address1">Endereço completo:</label>
+                        <input type="text" id="address1" placeholder="Rua ou avenida" name="address1" />
+                        <label for="address2">Número:</label>
+                        <input type="text" id="address2" placeholder="Nº" name="address2" />
+                        <label for="address3">Complemento:</label>
+                        <input type="text" id="address3" placeholder="Complemento" name="address3" />
+                        <label for="address4">Bairro:</label>
+                        <input type="text" id="address4" placeholder="Bairro" name="address4" />
+                        <label for="address5">Cidade:</label>
+                        <input type="text" id="address5" placeholder="Cidade" name="address5" />
+                        <label for="address6">Estado:</label>
+                        <select name="estado" id="address6">
+                            <option>Selecione o Estado:</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                        <label for="address7">CEP:</label>
+                        <input type="text" id="address7" placeholder="XX.XXX-XXX" name="address7" />
+                    </fieldset>
+                    <!-- Abertura das informações de botões -->
+                    <label for="reset">
+                        <button type="reset" id="reset" name="reset">Limpar dados</button>
+                    </label>
+                    <label for="send">
+                        <button type="submit" id="send" name="send">Enviar</button>
+                    </label>
+                    </p>
+                    <!-- Encerramento das informações de botões -->
+                    <!-- Encerramento das informações de dados de entrega -->
+                </div>
+                <!-- Encerramento: grid-item "entrega" -->
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Projekcii™ - todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
