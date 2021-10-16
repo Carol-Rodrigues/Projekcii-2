@@ -3,9 +3,27 @@
         margin: 0;
         padding: 0;
     }
-
-    li {
-        font-size: 0.7em;
+    #contato, #criador, #ico_footer, #outros {
+        padding-left: 40px;
+        margin-right: 20px;
+    }
+    footer nav {
+        height: 160px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul h3 {
+        margin-bottom: 15px;
+    }
+    ul#outros {
+        margin-left: 100px;
+        padding-top: 18px;
+    }
+    header {
+        margin-bottom: -2px;
+    }
+    .ico_footer {
+        margin-left: 40px;
     }
 /**/
 
@@ -37,19 +55,9 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin-bottom: 3px;
         font-weight: 500;
+        padding-left: 3px;
     }
 
-    /* Qtd do produto: estilização do tamanho da caixa de input; alinhamento do texto. Implementação do hover para alterar a formatação da letra e cor de fundo ao clicar. */
-    input {
-        width: 10%;
-        text-align: center;
-        display: inline-block;
-    }
-    input:hover {
-        font-weight: bold;
-        color: #28502E;
-        background-color: #E9C46A4D;
-    }
 
     /* Valor do produto: fonte (cor, tamanho, alinhamento). Utilização do display e float para alinhamento do texto com a imagem. */
     h4 {
@@ -61,16 +69,18 @@
         margin-top: -2px;
         margin-right: 120px;
         margin-bottom: 10px;
+        padding-left: 3px;
     }
 
     /* Avaliações: utilização do display e float para alinhamento da imagem de avaliação com o texto do valor. */
     .avaliacao {
         display: table-cell;
         float: left;
+        padding-right: 3px;
     }
 
     /* Ajustando quebra de linha após o alinhamento valor/avaliação. */
-    div {
+    div.button {
         clear: both;
         text-align: center;
     }
@@ -90,35 +100,36 @@
         }
     /**/
 
-    a {
+    .button a {
         text-decoration: none; /*Tirar o sublinhado do texto*/
         font-weight: bold; /*Peso da fonte*/
         font-size: 1em; /*Tamanho da fonte*/
     }
 
     /* Estilização dos "quadros" em que ficam cada um dos itens */
-        figure {        
-            border: 4px transparent;
-            border-style: groove;
-            border-radius: 10px;
-        }
         .figFilme {
-            box-shadow: 2px 2px 2px 2px #28502E;
+            border: 4px solid;
+            border-image: linear-gradient(to bottom, #28502E, #4aa557) 1;
         }
         .figFesta {
-            box-shadow: 2px 2px 2px 2px #FF4763;
+            border: 4px solid;
+            border-image: linear-gradient(to bottom, #ff1b3d, #fc5d75) 1;
         }
         .figEstrela {
-            box-shadow: 2px 2px 2px 2px #06089D;
+            border: 4px solid;
+            border-image: linear-gradient(to bottom, #06089D, #4492eb) 1;
         }
     /**/
 
     /* Fotos dos produtos: arredondamento da borda e alinhamento da foto */
-    img {
+    /* img {
         border-radius: 10px;
-    }
-    img, figcaption, h4, div {
+    } */
+    img.foto_produto, figcaption, h4, div {
         margin-bottom: 5px;
+    }
+    img.foto_produto {
+        width: 100%;
     }
 
 /**/
@@ -127,7 +138,7 @@
 
     /* Estilização do banner */
     /* Alinhamento e tamanho */
-    #estelar, #festa, #filme {
+    #estelar, #festa, #filme, #final {
         width: 100%;
         margin-bottom: 10px;
         margin-top: 13px;
@@ -135,26 +146,40 @@
 
     /*Imagem de fundo das categorias*/
     #estelar {
-        margin-top: 0;
-        background-image: url(../imagens/banner-estelar.jpg);
-        background-position: 70% 72%; /*Seleção de qual parte da imagem irá aparecer*/    
+        margin-top: 2px;
         height: 100px;
-        background-size: cover; /*Ocupar toda a página (a imagem é menor que o width)*/
         width: 100%;
+    }
+    #estelar h2 {
+        background-image: url(../imagens/banner-estelar.jpg);
+        background-size: cover; /*Ocupar toda a página (a imagem é menor que o width)*/
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
     }
     #festa {
-        background-image: url(../imagens/banner-festa.jpg);
-        background-position: 50% 38%; /*Seleção de qual parte da imagem irá aparecer*/
         height: 100px;
-        background-size: cover; /*Ocupar toda a página (a imagem é menor que o width)*/
         width: 100%;
     }
-    #filme {        
+    #festa h2 {
+        background-image: url(../imagens/banner-festa.jpg);
+        background-position: 90% 30%; /*Seleção de qual parte da imagem irá aparecer*/
+        background-size: cover; /*Ocupar toda a página (a imagem é menor que o width)*/
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    #filme {
+        height: 100px;
+        width: 100%;
+    }
+    #filme h2 {
         background-image: url(../imagens/banner-filme.jpg);
         background-position: 90% 30%; /*Seleção de qual parte da imagem irá aparecer*/
-        height: 100px;
         background-size: cover; /*Ocupar toda a página (a imagem é menor que o width)*/
-        width: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
     }
 
     /*Formatação do texto que está alinhado com a imagem*/
@@ -166,5 +191,19 @@
         padding: 30px;
         mix-blend-mode: overlay; /* Utilização do overlay para dar o efeito de sobreposição*/
         box-sizing: border-box; /*Para que o padding não distorça o tamanho*/
+    }
+
+    footer {
+        margin-top: 15px;
+        background-color: #47464b;
+    }
+
+    footer li {
+        color: white;
+    }
+
+    footer li>a:visited {
+        text-decoration: none;
+        color: white;
     }
 /**/

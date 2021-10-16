@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <title>Projekcii™</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Carolina Rodrigues Arangues" />
     <meta name="description" content="Site de ecommerce de projetores" />
     <meta name="keywords" content="projetor, loja online, ecommerce" />
     <link rel="stylesheet" type="text/css" href="css/estiloIndex.css">
+    <link rel="stylesheet" type="text/css" href="css/responsIndex.css">  
     <link rel="stylesheet" type="text/css" href="css/menu-e-footer.css">
-    <style>
-        @media (max-width: 650px) {
-            body, html {
-                height: 65%;
-            }
-            .texto {
-                font-size: 2em;
-                padding-left: 0;
-                left: 30%;
-            }
-            h2, p, h3, li {
-                font-size: 12px;
-            }
-            nav, #menu a {
-                font-size: 10px;
-            }
-            footer>p {
-                font-size: 9px;
-            }
-            .quem-somos, .nome, .nossos-produtos {
-                padding: 20px 40px;
-            }
-        }
-    </style>
-</head>
+    <script src="js/menu_script.js"></script>
+</head> 
+
 <body>
     <header>
-        <nav id="menu">                
-            <ul>
-            <li><a href="index.html">Página Inicial</a></li>
-            <li><a href="loja.html#estelar">Projetores Estelares</a></li>
-            <li><a href="loja.html#festa">Projetores de Festa</a></li>
-            <li><a href="loja.html#filme">Projetores de Filme</a></li>
-            <li><a href="carrinho.html">Meu Carrinho</a></li>
-            </ul>
+        <nav id="menu">
+            <img id="ico_logo" src="imagens/projector_dark.png" alt="Logo do site: ícone de projetor">
         </nav>
+        <div id="search">
+            <input type="search" id="ico_search" placeholder="Pesquisar na loja..." name="search" onmouseover="search()" onmouseout="nosearch()" />
+        </div>
+        <nav id="links">               
+            <a id="txt_login" href="">Login</a>
+            <img id="ico_login" src="imagens/ico_login.png" alt="Ícone de login">
+            <img id="ico_notif" src="imagens/ico_notif.png" alt="Ícone de sino" onmouseover="entrarNotif()" onmouseout="sairNotif()">     
+            <img id="ico_cart" src="imagens/ico_cart.png" alt="Ícone de carrinho" onmouseover="entrarCart()" onmouseout="sairCart()">
+            <img id="ico_heart" src="imagens/ico_heart.png" alt="Ícone de coração" onmouseover="entrarHeart()" onmouseout="sairHeart()">
+        </nav>
+        <div id="separator"></div>
     </header>
     <!-- Abertura da sessão: imagem inicial e título -->
     <section class="img1">
-        <div class="texto">
-            Projekcii
+        <div>
+            <img id="logo" src="imagens/projector.png" alt="">
+            <img id="nome" src="imagens/nome.png" alt="">
         </div>
     </section>
     <!-- Encerramento da sessão: imagem inicial e título -->
     <!-- Abertura da sessão Quem Somos -->
     <section class="quem-somos">
         <h2>Quem somos?</h2>
-        <p>
-            A Projekcii é um e-commerce especializado em projetores móveis, portáteis e que cabem (literalmente) no bolso de nossos clientes. Nasce com a ideia de trazer o mundo todo, para todo mundo. Projetar a vida lá fora para pessoas que, assim como eu, passaram a viver o mundo pandêmico dentro de quatro paredes.
+        <p class="textos">
+            A Projekcii é um e-commerce especializado em projetores móveis, portáteis e que cabem (literalmente) no
+            bolso de nossos clientes. Nasce com a ideia de trazer o mundo todo, para todo mundo. Projetar a vida lá fora
+            para pessoas que, assim como eu, passaram a viver o mundo pandêmico dentro de quatro paredes.
         </p>
-        <p>
-            Nós vendemos produtos que projetam diversos tipos de atividades que fazíamos em meio a aglomerações e troca de ideias e vivências entre nós, e que, em sua grande maioria, deixou de ser realizado nesse &quot;novo normal&quot;. Podemos te ajudar a matar as saudades de pegar um cineminha, virar a noite assistindo a lua e as estrelas ou até sair para uma balada.
+        <p class="textos">
+            Nós vendemos produtos que projetam diversos tipos de atividades que fazíamos em meio a aglomerações e troca
+            de ideias e vivências entre nós, e que, em sua grande maioria, deixou de ser realizado nesse &quot;novo
+            normal&quot;. Podemos te ajudar a matar as saudades de pegar um cineminha, virar a noite assistindo a lua e
+            as estrelas ou até sair para uma balada.
         </p>
     </section>
     <!-- Encerramento da sessão Quem Somos -->
@@ -71,14 +63,19 @@
     <!-- Abertura da sessão Nome -->
     <section class="nome">
         <h2>Por que &quot;Projekcii&quot;?</h2>
-        <p>
+        <p class="textos">
             Projekcii significa <u>projetar</u> em Esperanto.
         </p>
-        <p>
-            Esperanto é uma língua criada em meados de 1887 por Lazarus Zamenhof, filósofo polonês. A ideia do filósofo era de criar uma língua única universal, para gerar maior entendimento entre os povos. Para Zamenhof, a principal causa da desarmonia entre nações era resultado da falta de entendimento entre as pessoas.
+        <p class="textos">
+            Esperanto é uma língua criada em meados de 1887 por Lazarus Zamenhof, filósofo polonês. A ideia do filósofo
+            era de criar uma língua única universal, para gerar maior entendimento entre os povos. Para Zamenhof, a
+            principal causa da desarmonia entre nações era resultado da falta de entendimento entre as pessoas.
         </p>
-        <p>
-            O próprio termo <em>esperanto</em> significa <em>aquele que tem esperança</em>. Assim, a Projekcii™ surge em um momento delicado para a vida humana, e nós acreditamos que as palavras têm poder! Queremos que você, ao adquirir nossos produtos, levem consigo também um sentimento de esperança, harmonia e empatia entre as pessoas.
+        <p class="textos">
+            O próprio termo <em>esperanto</em> significa <em>aquele que tem esperança</em>. Assim, a Projekcii™ surge em
+            um momento delicado para a vida humana, e nós acreditamos que as palavras têm poder! Queremos que você, ao
+            adquirir nossos produtos, levem consigo também um sentimento de esperança, harmonia e empatia entre as
+            pessoas.
         </p>
     </section>
     <!-- Encerramento da sessão Nome -->
@@ -88,53 +85,127 @@
     <!-- Abertura da sessão Nossos Produtos -->
     <section class="nossos-produtos">
         <h2>Nossos produtos</h2>
-        <p>
-            A Projekcii™ trabalha com projetores de alta categoria e custo-benefício. Uma vez que nosso intuito é que você possa projetar o mundo dentro de quatro paredes, escolhemos nossos fornecedores considerando as opções mais diversas do mercado para que se encaixem no espaço e bolso de todes.
+        <p class="textos">
+            A Projekcii™ trabalha com projetores de alta categoria e custo-benefício. Uma vez que nosso intuito é que
+            você possa projetar o mundo dentro de quatro paredes, escolhemos nossos fornecedores considerando as opções
+            mais diversas do mercado para que se encaixem no espaço e bolso de todes.
         </p>
-        <p>
-            Almejando incluir os mais diversos gostos e personalidades de clientes, escolhemos a dedo três principais categorias de projetores.
+        <p class="textos">
+            Almejando incluir os mais diversos gostos e personalidades de clientes, escolhemos a dedo três principais
+            categorias de projetores.
         </p>
         <ul type="circle">
             <li class="subtitulo1">Projetores Estelares</li>
-            <p>
-                Para quem gosta de observar a noite, as diversas fases da Lua e busca no céu uma estrela cadente para pedir que a pandemia acabe logo, <a class="link1" href="loja.html#estelar" target="_blank">essa</a> é a categoria para você!
+            <p class="textos">
+                Para quem gosta de observar a noite, as diversas fases da Lua e busca no céu uma estrela cadente para
+                pedir que a pandemia acabe logo, <a class="link1" href="loja.html#estelar" target="_blank">essa</a> é a
+                categoria para você!
             </p>
 
             <li class="subtitulo2">Projetores de Festa</li>
-            <p>
-                Você achou que eu não ia rebolar minha extensão hoje? Se você sente falta de aglomeração suada, dançar até o chão e provar todos os drinks da balada, pode clicar <a class="link2" href="loja.html#festa" target="_blank">aqui</a> que não vai se arrepender!</p>
+            <p class="textos">
+                Você achou que eu não ia rebolar minha extensão hoje? Se você sente falta de aglomeração suada, dançar
+                até o chão e provar todos os drinks da balada, pode clicar <a class="link2" href="loja.html#festa"
+                    target="_blank">aqui</a> que não vai se arrepender!</p>
 
             <li class="subtitulo3">Projetores de Filme</li>
-            <p>
-                Pipoquinha, refri de 1 litro, chocolate e balinhas ácidas. Ahh e tem o filme também. Se o escurinho do cinema é o seu lugar, clicar <a class="link3" href="loja.html#filme" target="_blank">aqui</a> você deve. <span>Cheirinho de pipoca não incluso.</span>
+            <p class="textos">
+                Pipoquinha, refri de 1 litro, chocolate e balinhas ácidas. Ahh e tem o filme também. Se o escurinho do
+                cinema é o seu lugar, clicar <a class="link3" href="loja.html#filme" target="_blank">aqui</a> você deve.
+                <span>Cheirinho de pipoca não incluso.</span>
         </ul>
     </section>
     <!-- Encerramento da sessão Nossos Produtos -->
     <!-- Abertura da sessão: imagem festa -->
     <section class="img4"></section>
     <!-- Encerramento da sessão: imagem festa -->
-    <!-- Abertura da sessão Contato -->
-    <section class="contato">
-        <h2>Contato</h2>
-        <nav>
-            <img class="logo" src="imagens/IGico.jpg" alt="ícone do instagram" title="Instagram da Projekcii" /> Projekcii™
-            <img class="logo" src="imagens/FBico.png" alt="ícone do facebook" title="Facebook da Projekcii" /> Projekcii™
-            <img class="logo" src="imagens/WPico.jpg" alt="ícone do whatsapp" title="Whatsapp da Projekcii" /> Projekcii™
-            <h3>Conheça quem nos criou:</h3>
-            <img class="logo" src="imagens/IGico.jpg" alt="ícone do instagram" title="Instagram dos Criadores" /> <a href="https://www.instagram.com/carol.r.arangues/" target="_blank"> Carol.R.Arangues</a>
-            <img class="logo" src="imagens/GHico.png" alt="ícone do github" title="Github dos Criadores" />
-            <a href="https://github.com/Carol-Rodrigues" target="_blank"> Carol-Rodrigues</a>
-            <img class="logo" src="imagens/LIico.png" alt="ícone do linkedin" title="LinkedIn dos Criadores" />
-            <a href="https://www.linkedin.com/in/carolina-arangues/" target="_blank"> Carolina-Arangues</a>
-            </p>
-        </nav>
+    <!-- Abertura da sessão Parceiros -->
+    <section class="parceiros">
+        <h2>Nossos parceiros</h2>
+        <p class="textos">
+            Trabalhamos em parceria e contamos com a experiência das melhores empresas do mercado.
+        <ul class="ico_parceiros">
+            <figure>
+                <img id="ico_HL" src="imagens/HueLiv_ico.PNG" alt="Logotipo da marca HueLiv" />
+            </figure>
+            <figure>
+                <img id="ico_FF" src="imagens/fitfort_ico.jpg" alt="Logotipo da marca FitFort" />
+            </figure>
+            <figure>
+                <img id="ico_BE" src="imagens/benq_ico.png" alt="Logotipo da marca Benq" />
+            </figure>
+            <figure>
+                <img id="ico_EP" src="imagens/epson_ico.jpg" alt="Logotipo da marca Epson" />
+            </figure>
+        </ul>
+        </p>
     </section>
-    <!-- Encerramento da sessão Contato -->
+    <!-- Encerramento da sessão Parceiros -->
     <!-- Abertura da sessão: imagem final -->
     <section class="img5"></section>
     <!-- Encerramento da sessão: imagem final -->
     <footer>
-        <p>Projekcii™ - todos os direitos reservados.</p>
+        <nav>
+            <ul>
+                <li>
+                    <h3>Contato:</h3>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/IGico.jpg" alt="ícone do instagram" title="Instagram da Projekcii" /> <a href=""> Projekcii™ </a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/FBico.png" alt="ícone do facebook" title="Facebook da Projekcii" /> <a href=""> Projekcii™ </a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/WPico.jpg" alt="ícone do whatsapp" title="Whatsapp da Projekcii" /> <a href=""> Projekcii™ </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>Conheça quem nos criou:</h3>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/IGico.jpg" alt="ícone do instagram"
+                        title="Instagram dos Criadores" /> <a href="https://www.instagram.com/carol.r.arangues/"
+                        target="_blank"> Carol.R.Arangues</a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/GHico.png" alt="ícone do github" title="Github dos Criadores" />
+                    <a href="https://github.com/Carol-Rodrigues" target="_blank"> Carol-Rodrigues</a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/LIico.png" alt="ícone do linkedin" title="LinkedIn dos Criadores" />
+                    <a href="https://www.linkedin.com/in/carolina-arangues/" target="_blank"> Carolina-Arangues</a>
+                </li>
+            </ul>
+            <ul class="ico_footer">
+                <figure>
+                    <img id="footer_ico_01" src="imagens/ico_footer_01.PNG" alt="Prêmio Reclame Aqui 2021" />
+                </figure>
+                <figure>
+                    <img id="footer_ico_02" src="imagens/ico_footer_03.PNG" alt="Prêmio Ebit 2021" />
+                </figure>
+                <figure>
+                    <img id="footer_ico_03" src="imagens/ico_footer_02.PNG" alt="Compra Segura" />
+                </figure>
+            </ul>
+            <ul id="outros">
+                <li>
+                    <a href="loja.html" target="_blank"> Loja</a>
+                 </li>
+                <li>
+                   <a href=""> Carreiras</a>
+                </li>
+                <li>
+                    <a href=""> Termos</a>
+                </li>
+                <li>
+                    <a href=""> Política de Privacidade</a>
+                </li>
+            </ul>
+        </nav>
+        <p id="footer">Projekcii™ - todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>

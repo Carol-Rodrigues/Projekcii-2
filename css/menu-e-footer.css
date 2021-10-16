@@ -1,45 +1,126 @@
 /* Estilizando o menu de navegação */
 
-    nav#menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        background: linear-gradient(to left top, #868585, #F5F4F6, #EAE9EC);
+    header {
+        display: block;
+        background: linear-gradient(to bottom right, #b2ece6, #2A9D8F);
+        height: 5,5vh;
     }
 
-    nav#menu a {
-        display: inline-block;
-        padding:  0.5em 1.5em;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    #separator {
+        width: 100%;
+        height: 2px;
+        background-color: #3B3A41;
+        clear: both;
+    }
+
+    #search {
+        float: left;
+        padding-top: 6px;
+        padding-left: 500px;
+    }
+
+    #ico_logo {
+        width: 30px;
+        padding: 5px 10px;
+        float: left;
+    }
+
+    #ico_cart, #ico_heart, #ico_notif, #ico_login {
+        width: 23px;
+        padding-top: 10px;
+        padding-left: 25px;
+        float: right;
+        cursor: pointer;
+    }
+
+    #ico_login {
+        padding-right: 5px;
+    }
+
+    #txt_login {
+        float: right;
+        padding-right: 10px;
+        padding-top: 9px;
+        font-family: 'Days One', sans-serif;
+        color: #3B3A41;
         text-decoration: none;
-        color: #2A9D8F;
-        font-weight: 900;
+        font-size: large;
     }
 
-    nav#menu ul {
-        margin: 0.3em 0 0.5em;
-        text-align: center;
+    /*Incluindo imagens de estilização antes do input*/
+    input#ico_search {
+        background-image: url(../imagens/ico_search.png);
+        height: 30px;
+        width: 300px;
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-position: 5px;        
     }
-
-    nav#menu li {
-        display: inline;    
-        border-left: 0.5px solid #2A9D8F;
-    }
-
-    nav#menu li:last-of-type {
-        border-right: 0.5px solid #2A9D8F;
+    header input {
+        padding-left: 30px;
     }
 /**/
 
-footer {
-    background-color: #3B3A41;
-    height: 26px;
-    color: white;
-    font-weight: 100;
-    font-size: x-small;
-    line-height: 30px;
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 0 5px;
-    margin-top: 20px;
-}
+/* Estilização do footer */
+    
+    footer {
+        color: #3B3A41;
+        font-weight: 100;
+        font-size: small;
+        line-height: 30px;
+        font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 100%;        
+    }
+
+    footer>nav {
+        display: flex;        
+    }
+
+    /*Contatos e demais páginas internas: estilo da lista*/
+    ul>li {
+        list-style: none;
+    }
+    li>a:link {
+        text-decoration: none;
+        color: #2A9D8F;
+    }
+    li>a:visited {
+        text-decoration: none;
+        color: #3B3A41;
+    }
+    li>a:hover {
+        text-decoration: underline;
+
+    }
+
+    /* Contatos: ícones de redes sociais */
+    .logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Estilização dos ícones do Footer */
+    #footer_ico_01, #footer_ico_02 {
+        width: 20%;
+        float: left;
+        margin-left: 60px;
+    }
+
+    #footer_ico_02 {
+        margin-top: 30px;
+    }
+
+    #footer_ico_03 {
+        width: 30%;
+        float: right;
+        margin-top: 40px;
+    }
+
+    /* Copyright */
+    p#footer {
+        background-color: #3B3A41;
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+/**/

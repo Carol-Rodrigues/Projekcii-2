@@ -14,7 +14,7 @@
         text-align: center;
     }
     
-    p {
+    p.textos {
         margin-bottom: 20px;
     }
 /**/
@@ -26,7 +26,7 @@
 /**/
 
 /* Estilização das sessões de texto */
-    .quem-somos, .nome, .nossos-produtos {
+    .quem-somos, .nome, .nossos-produtos, .parceiros {
         color: #474747;
         background-color: white;
         text-align: justify;
@@ -46,28 +46,19 @@
     }
 /**/
 
-/* Nome da página que fica sobre a imagem inicial */
-    .texto {
-        position: absolute;
-        left: 35%;
-        top: 40%;
-        color: white;
-        font-size: 6em;
-        text-decoration: underline overline;
-        padding: 18px;
-        letter-spacing: 3px;
-    }
-/**/
-
 span {
     font-style: italic;
 }
 
-/* Estilização dos ícones de redes sociais */
-    .logo {
-        width: 20px;
-        height: 20px;
-        display: inline-block;
+/* Estilização dos ícones dos Meus Parceiros */
+    ul.ico_parceiros {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+    }
+
+    img#ico_HL, img#ico_EP, img#ico_FF, img#ico_BE {
+        width: 60%;
     }
 /**/
 
@@ -117,3 +108,54 @@ span {
         background-image: url(../imagens/banner-final.jpg);
     }
 /**/
+
+/* Logo e nome na parte inicial */
+    img#nome {
+        animation: 1s shake infinite alternate;
+        opacity: 0;
+        width: 38%;
+    }
+    
+    @keyframes shake {
+        0% { transform: skewY(-2deg); }
+        5% { transform: skewY(2deg); }
+        10% { transform: skewX(-2deg); }
+        15% { transform: skewX(2deg); }
+        20% { transform: skewY(0deg); }
+        100% { transform: skewY(0deg); }  
+    }
+
+    img#logo {
+        width: 100px;
+        padding-top: 170px;
+    }
+
+    img#logo, img#nome {
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    div:hover img#logo {
+        opacity: 0;
+    }
+
+    div:hover img#nome {
+        opacity: 1;
+    }
+
+    img#nome {
+        box-sizing: border-box;
+    }
+/**/
+
+
+ul#outros {
+    margin-left: 70px;
+    padding-top: 30px;
+}

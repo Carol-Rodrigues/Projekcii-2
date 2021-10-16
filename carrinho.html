@@ -5,31 +5,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <title>Meu Carrinho - Projekcii™</title>
     <link rel="stylesheet" type="text/css" href="css/estiloCarrinho.css">
     <link rel="stylesheet" type="text/css" href="css/menu-e-footer.css">
-    <link rel="stylesheet" type="text/css" href="css/responsCarrinho.css">
+    <link rel="stylesheet" type="text/css" href="css/responsCarrinho.css">  
+    <script src="js/menu_script.js"></script>
+    <script src="js/carrinho.js"></script>
 </head>
 
 <body>
     <header>
-        <h1 style="text-decoration: underline overline">Projekcii</h1>
+        <nav id="menu">
+            <img id="ico_logo" src="imagens/projector_dark.png" alt="Logo do site: ícone de projetor">
+        </nav>
+        <div id="search">
+            <input type="search" id="ico_search" placeholder="Pesquisar na loja..." name="search" onmouseover="search()" onmouseout="nosearch()" />
+        </div>
+        <nav id="links">               
+            <a id="txt_login" href="">Login</a>
+            <img id="ico_login" src="imagens/ico_login.png" alt="Ícone de login">
+            <img id="ico_notif" src="imagens/ico_notif.png" alt="Ícone de sino" onmouseover="entrarNotif()" onmouseout="sairNotif()">     
+            <img id="ico_cart" src="imagens/ico_cart.png" alt="Ícone de carrinho" onmouseover="entrarCart()" onmouseout="sairCart()">
+            <img id="ico_heart" src="imagens/ico_heart.png" alt="Ícone de coração" onmouseover="entrarHeart()" onmouseout="sairHeart()">
+        </nav>
+        <div id="separator"></div>
     </header>
-    <nav id="menu">                
-        <ul>
-        <li><a href="index.html">Página Inicial</a></li>
-        <li><a href="loja.html#estelar">Projetores Estelares</a></li>
-        <li><a href="loja.html#festa">Projetores de Festa</a></li>
-        <li><a href="loja.html#filme">Projetores de Filme</a></li>
-        </ul>
-    </nav>
     <main>
         <form action="">
             <div id="main-grid">
                 <!-- Abertura: criando o grid-item "cadastro" -->
                 <div class="grid-item cadastro">
                     <!-- Abertura das informações de dados cadastrais -->
-                    <img src="imagens/perfil.png" alt="ícone de perfil">
+                    <img src="imagens/perfil-de-usuario.png" alt="ícone de perfil">
                     <fieldset id="dadosCadastrais">
                         <legend>Dados cadastrais</legend>
                         <label for="email">E-mail:</label>
@@ -59,7 +67,7 @@
                 <!-- Encerramento: grid-item "cadastro" -->
                 <!-- Abertura: criando o grid-item "pedido" -->
                 <div class="grid-item pedido">
-                    <img src="imagens/pedido.png" alt="ícone do pedido">
+                    <img src="imagens/projector.png" alt="ícone do pedido">
                     <fieldset>
                         <legend>Dados do pedido</legend>
                         <fieldset>
@@ -163,16 +171,6 @@
                                 <option value="HC">Hipercard</option>
                                 <option value="DN">Diners</option>
                             </select>
-                            <label for="card_number">Número do cartão:</label>
-                            <input type="text" id="card_number" placeholder="XXXX XXXX XXXX XXXX" name="card_number" />
-                            <label for="card_name">Nome impresso no cartão:</label>
-                            <input type="text" id="card_name" placeholder="Nome como está no cartão" name="card_name" />
-                            <label for="card_cpf">CPF do titular:</label>
-                            <input type="text" id="card_cpf" name="card_cpf" placeholder="XXX.XXX.XXX-XX">
-                            <label for="card_date">Validade:</label>
-                            <input type="month" id="card_date" name="card_date">
-                            <label for="card_code">Código de segurança:</label>
-                            <input type="text" id="card_code" name="card_code" placeholder="XXX">
                         </fieldset>
                     </fieldset>
                     <!-- Encerramento das informações de formas de pagamento -->
@@ -237,9 +235,82 @@
                 <!-- Encerramento: grid-item "entrega" -->
             </div>
         </form>
+        <div id="divBotoes">
+            <label for="alterarCadastro" class="botaoMudar">
+                <button type="submit" id="alterarCadastro" name="alterarCadastro" onclick="aparecerCadastro()"></button>
+            </label>        
+            <label for="alterarPedido" class="botaoMudar">
+                <button type="submit" id="alterarPedido" name="alterarPedido" onclick="aparecerPedido()"></button>
+            </label>
+            <label for="alterarEntrega" class="botaoMudar">
+                <button type="submit" id="alterarEntrega" name="alterar" onclick="aparecerEntrega()"></button>
+            </label>
+        </div>
     </main>
     <footer>
-        <p>Projekcii™ - todos os direitos reservados.</p>
+        <nav>
+            <ul id="contato">
+                <li>
+                    <h3>Contato:</h3>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/IGico.jpg" alt="ícone do instagram" title="Instagram da Projekcii" /> <a href=""> Projekcii™ </a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/FBico.png" alt="ícone do facebook" title="Facebook da Projekcii" /> <a href=""> Projekcii™ </a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/WPico.jpg" alt="ícone do whatsapp" title="Whatsapp da Projekcii" /> <a href=""> Projekcii™ </a>
+                </li>
+            </ul>
+            <ul id="criador">
+                <li>
+                    <h3>Conheça quem nos criou:</h3>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/IGico.jpg" alt="ícone do instagram"
+                        title="Instagram dos Criadores" /> <a href="https://www.instagram.com/carol.r.arangues/"
+                        target="_blank"> Carol.R.Arangues</a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/GHico.png" alt="ícone do github" title="Github dos Criadores" />
+                    <a href="https://github.com/Carol-Rodrigues" target="_blank"> Carol-Rodrigues</a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/LIico.png" alt="ícone do linkedin" title="LinkedIn dos Criadores" />
+                    <a href="https://www.linkedin.com/in/carolina-arangues/" target="_blank"> Carolina-Arangues</a>
+                </li>
+            </ul>
+            <ul class="ico_footer">
+                <figure>
+                    <img id="footer_ico_01" src="imagens/ico_footer_01.PNG" alt="Prêmio Reclame Aqui 2021" />
+                </figure>
+                <figure>
+                    <img id="footer_ico_02" src="imagens/ico_footer_03.PNG" alt="Prêmio Ebit 2021" />
+                </figure>
+                <figure>
+                    <img id="footer_ico_03" src="imagens/ico_footer_02.PNG" alt="Compra Segura" />
+                </figure>
+            </ul>
+            <ul id="outros">
+                <li>
+                    <a href="index.html" target="_blank"> Home</a>
+                 </li>
+                <li>
+                    <a href="loja.html" target="_blank"> Loja</a>
+                </li>
+                <li>
+                   <a href=""> Carreiras</a>
+                </li>
+                <li>
+                    <a href=""> Termos</a>
+                </li>
+                <li>
+                    <a href=""> Política de Privacidade</a>
+                </li>
+            </ul>
+        </nav>
+        <p id="footer">Projekcii™ - todos os direitos reservados.</p>
     </footer>
 </body>
 

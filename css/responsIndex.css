@@ -1,0 +1,43 @@
+/* RESPONSIVIDADE - TABLET */
+
+@media (max-width: 768px) {
+
+    body,
+    html {
+        height: 65%;
+    }
+
+    .texto {
+        font-size: 2em;
+        padding-left: 0;
+        left: 30%;
+    }
+
+    h2,
+    p,
+    h3,
+    li {
+        font-size: 12px;
+    }
+
+    nav,
+    #menu a {
+        font-size: 10px;
+    }
+
+    footer>p {
+        font-size: 9px;
+    }
+
+
+    .quem-somos,
+    .nome,
+    .nossos-produtos {
+        padding: 20px 40px;
+    }
+
+    #search {
+        padding-left: 100px;
+    }
+
+}

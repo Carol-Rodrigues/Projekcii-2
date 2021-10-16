@@ -3,6 +3,24 @@
         margin:0;
         padding: 0;
     }
+    #contato, #criador, #ico_footer, #outros {
+        padding-left: 40px;
+        margin-right: 20px;
+    }
+    footer nav {
+        height: 160px;
+        padding-top: 10px;
+        margin-bottom: 25px;
+    }
+    nav ul h3 {
+        margin-bottom: 15px;
+    }
+    ul#outros {
+        margin-left: 100px;
+    }
+    header {
+        margin-bottom: -16px;
+    }
 /**/
 
 /* Criando a estrutura da grid principal */
@@ -10,6 +28,10 @@
     /*Chamando o body como grid container e estruturando seus elementos*/
     body {
         display: grid;
+        background-image: url(../imagens/imagem_carrinho.png);
+        background-repeat: no-repeat;
+        background-size: cover;        
+        color: white;
         
         /*Estabelecendo o espaçamento entre os elementos da grid*/
         grid-gap: 1rem; 
@@ -17,7 +39,7 @@
         /* Os elementos da grid são: header/main/footer */
         grid-template-areas:
         "header"
-        "nav"
+        "div"
         "main"
         "footer";
     }
@@ -26,8 +48,8 @@
         grid-area: header;
     }
 
-    nav {
-        grid-area: nav;
+    div#head {
+        grid-area: div;
     }
 
     main {
@@ -36,31 +58,20 @@
 
     footer {
         grid-area: footer;
+        color: #3B3A41;
     }
 /**/
 
 /* Criando a estrutura da grid secundária - criada dentro da main */
-
-    /*Chamando o main como grid container*/
-    #main-grid {
-        display: grid;
-
-        /*Segregando a main em três colunas*/
-        grid-template-columns: [cadastro] 1.5fr [pedido] 2.5fr [entrega] 3fr;
-
-        /*Definindo as especificações das colunas*/
-        column-gap: 0.5em;
-        margin: 0.5em;
-    }
 
     .grid-item {
         border: 1px hidden;
         border-radius: 2%;
         padding: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #EDEBE9CC;
-        box-sizing: border-box;
-        box-shadow: 0px 12px 12px 6px rgb(49, 49, 49);
+        background-color: #3B3A41B3;
+        box-shadow: 0px 2px 7px 6px rgb(49, 49, 49);
+        margin: 0 auto;
     }
 /**/
 
@@ -68,9 +79,8 @@
 
     /*Tamanho, opacidade e centralização*/
     .cadastro img, .pedido img, .entrega img {
-        width: 70px;
-        height: 70px;
-        opacity: 45%;
+        width: 50px;
+        opacity: 70%;
         display: block;
         margin: -5px auto 5px auto;
     }
@@ -90,7 +100,7 @@
 
     /*Itens do formulário: tamanho e localização no grid*/
     .cadastro input {
-        width: 80%;
+        width: 50%;
     }
     .cadastro label {
         display: block;
@@ -100,6 +110,10 @@
     }    
     #dadosCadastrais input {
         padding-left: 20px;
+    }
+    #email, #password, #password2, #name, #date, #cpf, #phone {
+        margin-left: 50px;
+        width: 60%;
     }
 
     /*Incluindo imagens de estilização antes do input*/
@@ -180,25 +194,9 @@
         margin-bottom: 10px;
     }
 
-    #card_number {
-        padding-left: 5px;
-        width: 35%;
-        text-align: center;
-    }
-
-    #card_name, #address3 {
+    #address3 {
         width: 34%;
         margin-bottom: 10px;
-    }
-
-    #card_cpf {
-        padding-left: 5px;
-        width: 20%
-    }
-
-    #card_code {
-        width: 10%;
-        text-align: center;
     }
 
     #dadosEntrega {
@@ -219,32 +217,30 @@
         margin-bottom: 10px;
     }
 
-    button {
+    button#reset, button#send {
         width: 30%;
         display: block;
         margin: 15px auto 0 auto;
         align-content: center;
-        background: linear-gradient(to bottom, #F4F4F5, #BFBFC5);
+        background: linear-gradient(to bottom, #48474d, #3B3A41);
         font-weight: 700;
-        color: rgb(29, 28, 28);
-        opacity: 80%;
+        color: white;
         border-radius: 10px;
         height: 25px;
+        border: 1px #2A9D8F solid;
     }    
 /**/
 
 /* Estilizando o banner */    
-    header {
-        /* overflow: hidden; */
+    div#head {
         background: linear-gradient(to bottom left, #28502E, #06089D); /* Aplicando cor de fundo apenas na hipótese de problemas no carregamento da imagem por algum navegador, a cor de fundo toma o lugar da imagem*/
         width: 100%;
-        margin-bottom: 5px;
         background-image: url(../imagens/banner-entrega.jpg);
         background-position: 60% 72%;        
         height: 200px;
     }
 
-    h1 {
+    div#head h1 {
         color: #fff;
         font-size: 10vh;
         font-family: 'Days One', sans-serif;        
@@ -257,23 +253,67 @@
 /**/
 
 
-fieldset {
+main fieldset {
     padding: 5px;
-    border: 1px solid #DAD6D2;
+    border: 1px solid #2A9D8F;
 }
 
-legend {
+main legend {
     font-weight: bold;
 }
 
-label {
+main label {
     cursor: pointer;
 }
 
-input {
+main input {
     border: 1px solid #ACA39A;
     border-radius: 5%;
     background-repeat: no-repeat;
     height: 17px;
     background-position: 5px;
+}
+
+.pedido, .entrega {
+    display: none;
+}
+
+.entrega {
+    width: 30%;
+}
+
+.pedido {
+    width: 35%;
+}
+
+.cadastro {
+    width: 20%;
+}
+
+button#alterarPedido, button#alterarEntrega, button#alterarCadastro {
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(to bottom, #dddddf, white);
+}
+
+button#alterarCadastro {
+    margin: 20px 10px 0 710px;
+}
+
+button#alterarPedido {
+    margin-right: 10px;
+}
+
+footer li {
+    color: white;
+}
+
+footer li>a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.ico_footer {
+    margin-left: 40px;
 }

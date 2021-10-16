@@ -5,23 +5,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <title>Loja - Projekcii™</title>
     <link rel="stylesheet" type="text/css" href="css/estiloLoja.css">
     <link rel="stylesheet" type="text/css" href="css/menu-e-footer.css">
-    <link rel="stylesheet" type="text/css" href="css/responsLoja.css">    
+    <link rel="stylesheet" type="text/css" href="css/responsLoja.css">  
+    <script src="js/menu_script.js"></script>  
 </head>
 
 <body>
     <header>
-        <nav id="menu">                
-            <ul>
-            <li><a href="index.html">Página Inicial</a></li>
-            <li><a href="loja.html#estelar">Projetores Estelares</a></li>
-            <li><a href="loja.html#festa">Projetores de Festa</a></li>
-            <li><a href="loja.html#filme">Projetores de Filme</a></li>
-            <li><a href="carrinho.html">Meu Carrinho</a></li>
-            </ul>
+        <nav id="menu">
+            <img id="ico_logo" src="imagens/projector_dark.png" alt="Logo do site: ícone de projetor">
         </nav>
+        <div id="search">
+            <input type="search" id="ico_search" placeholder="Pesquisar na loja..." name="search" onmouseover="search()" onmouseout="nosearch()" />
+        </div>
+        <nav id="links">               
+            <a id="txt_login" href="">Login</a>
+            <img id="ico_login" src="imagens/ico_login.png" alt="Ícone de login">
+            <img id="ico_notif" src="imagens/ico_notif.png" alt="Ícone de sino" onmouseover="entrarNotif()" onmouseout="sairNotif()">     
+            <img id="ico_cart" src="imagens/ico_cart.png" alt="Ícone de carrinho" onmouseover="entrarCart()" onmouseout="sairCart()">
+            <img id="ico_heart" src="imagens/ico_heart.png" alt="Ícone de coração" onmouseover="entrarHeart()" onmouseout="sairHeart()">
+        </nav>
+        <div id="separator"></div>
     </header>
     <main>
         <!-- Abertura da sessão dos banners: projetores estrelares -->
@@ -34,33 +41,33 @@
             <figure class="figEstrela">
                 <img src="imagens/projetorEstrela1.png"
                 alt="A imagem demonstra um projetor de noite estrelada iluminando um quarto"
-                title="Projetor de estrelas Astro Sky" id="Star_id1" />
+                title="Projetor de estrelas Astro Sky" id="Star_id1" class="foto_produto" />
                 <figcaption>Estrela celestial Astro Sky Cosmos</figcaption>
                 <h4>R$ 274,50</h4>
                 <img src="imagens/star45.png" alt="avaliação: 4 estrelas e meia" class="avaliacao">
-                <div>
+                <div class="button">
                     <button class="botEstrela"><a class="linkEstrela" href="carrinho.html" target="_blank">Adicionar ao carrinho</button></a>
                 </div>
             </figure>
             <figure class="figEstrela">
                 <img src="imagens/projetorEstrela2.png"
                 alt="A imagem demonstra um projetor de galáxia em formato circular iluminando uma sala"
-                title="Projetor de estrelas HueLiv 3 em 1" id="Star_id2" />
+                title="Projetor de estrelas HueLiv 3 em 1" id="Star_id2" class="foto_produto" />
                 <figcaption>Projetor Star Night Lights HueLiv</figcaption>
                 <h4>R$ 435,00</h4>
                 <img src="imagens/star4.png" alt="avaliação: 4 estrelas" class="avaliacao">
-                <div>
+                <div class="button">
                     <button class="botEstrela"><a class="linkEstrela" href="carrinho.html" target="_blank">Adicionar ao carrinho</button></a>
                 </div>
             </figure>
             <figure class="figEstrela">
                 <img src="imagens/projetorEstrela3.png"
                 alt="A imagem demonstra um projetor de galáxia em formato de meia-lua iluminando uma sala"
-                title="Projetor de estrelas FITFORT" id="Star_id3" />
+                title="Projetor de estrelas FITFORT" id="Star_id3" class="foto_produto" />
                 <figcaption>Galaxy Star Night Light FITFORT</figcaption>
                 <h4>R$ 353,00</h4>
                 <img src="imagens/star45.png" alt="avaliação: 4 estrelas e meia" class="avaliacao">
-                <div>
+                <div class="button">
                     <button class="botEstrela"><a class="linkEstrela" href="carrinho.html" target="_blank">Adicionar ao carrinho</button></a>
                 </div>
             </figure>
@@ -76,33 +83,33 @@
             <figure class="figFesta">
                 <img src="imagens/projetorBalada1.png"
                 alt="A imagem demonstra um projetor em um tripé com exemplos de luzes coloridas de festa e uma mão humana segurando o controle remoto"
-                title="Projetor de balada Rohs" id="Party_id1" />
-                <figcaption>Mini Projetor Holográfico Balada Rítmico</figcaption>     
+                title="Projetor de balada Rohs" id="Party_id1" class="foto_produto" />
+                <figcaption>Mini Projetor Holográfico Balada</figcaption>     
                 <h4>R$ 99,00</h4>           
                 <img src="imagens/star5.png" alt="avaliação: 5 estrelas" class="avaliacao">
-                <div>
+                <div class="button">
                     <button class="botFesta"><a class="linkFesta" href="carrinho.html" target="_blank">Adicionar ao carrinho</button></a>
                 </div>
             </figure>
             <figure class="figFesta">
                 <img src="imagens/projetorBalada2.png"
                 alt="A imagem demonstra um projetor em um tripé com quatro exemplos de iluminação ao lado"
-                title="Projetor de balada HL-69" id="Party_id2" />
+                title="Projetor de balada HL-69" id="Party_id2" class="foto_produto" />
                 <figcaption>PROJETOR Holográfico HL-69</figcaption>
                 <h4>R$ 305,00</h4>
                 <img src="imagens/star4.png" alt="avaliação: 4 estrelas" class="avaliacao">
-                <div>
+                <div class="button">
                     <button class="botFesta"><a class="linkFesta" href="carrinho.html" target="_blank">Adicionar ao carrinho</button></a>
                 </div>
             </figure>
             <figure class="figFesta">
                 <img src="imagens/projetorBalada3.png"
                 alt="A imagem demonstra um projetorem formato meia-lua com 5 exemplos de iluminação ao seu redor"
-                title="Projetor de balada Bola Maluca" id="Party_id3" />
-                <figcaption>Globo Bola Maluca Com Controle Remoto</figcaption>
+                title="Projetor de balada Bola Maluca" id="Party_id3" class="foto_produto" />
+                <figcaption>Globo Bola Maluca</figcaption>
                 <h4>R$ 169,99</h4>
                 <img src="imagens/star45.png" alt="avaliação: 4 estrelas e meia" class="avaliacao">
-                <div>
+                <div class="button">
                     <button class="botFesta"><a class="linkFesta" href="carrinho.html" target="_blank">Adicionar ao carrinho</button></a>
                 </div>
             </figure>
@@ -118,41 +125,100 @@
             <figure class="figFilme">
                 <img src="imagens/projetorFilme1.png"
                 alt="A imagem mostra o projetor à venda e, abaixo dele, símbolos referentes a algumas de suas especificidades"
-                title="Mini Projetor LED" id="Movie_id1" />
+                title="Mini Projetor LED" id="Movie_id1" class="foto_produto" />
                 <figcaption>Mini Projetor LED Image Technology</figcaption>         
                 <h4>R$ 198,10</h4>       
                 <img src="imagens/star45.png" alt="avaliação: 4 estrelas e meia" class="avaliacao">
-                <div>
+                <div class="button">
                     <button class="botFilme"><a class="linkFilme" href="carrinho.html" target="_blank">Adicionar ao carrinho</button></a>
                 </div>
             </figure>
             <figure class="figFilme">
                 <img src="imagens/projetorFilme2.png"
                 alt="A imagem mostra o projetor e uma mão humana inserindo um smartphone no aparelho"
-                title="Mini Projetor Docooler" id="Movie_id2" />
-                <figcaption>Mini Projetor Doocoler para Smartphone</figcaption>
+                title="Mini Projetor Docooler" id="Movie_id2" class="foto_produto" />
+                <figcaption>Mini Projetor Doocoler</figcaption>
                 <h4>R$ 243,99</h4>
                 <img src="imagens/star5.png" alt="avaliação: 5 estrelas" class="avaliacao">
-                <div>
+                <div class="button">
                     <button class="botFilme"><a class="linkFilme" href="carrinho.html" target="_blank">Adicionar ao carrinho</button></a>
                 </div>
             </figure>
             <figure class="figFilme">
                 <img src="imagens/projetorFilme3.png"
                 alt="A imagem mostra diversas fotos do projetor, em diferentes ângulos e detalhes dos itens que o acompanham"
-                title="Mini Projetor UC-28" id="Movie_id3" />
+                title="Mini Projetor UC-28" id="Movie_id3" class="foto_produto" />
                 <figcaption>Mini Projetor Portátil H80 Uc-28 - Ybx</figcaption>
                 <h4>R$ 389,00</h4>
                 <img src="imagens/star4.png" alt="avaliação: 4 estrelas" class="avaliacao">
-                <div>
+                <div class="button">
                     <button class="botFilme"><a class="linkFilme" href="carrinho.html" target="_blank">Adicionar ao carrinho</button></a>
                 </div>
             </figure>
         </section>
-        <!-- Encerramento da loja: projetores de filmes -->
+        <!-- Encerramento da loja: projetores de filmes -->  
     </main>
     <footer>
-        <p>Projekcii™ - todos os direitos reservados.</p>
+        <nav>
+            <ul id="contato">
+                <li>
+                    <h3>Contato:</h3>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/IGico.jpg" alt="ícone do instagram" title="Instagram da Projekcii" /> <a href=""> Projekcii™ </a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/FBico.png" alt="ícone do facebook" title="Facebook da Projekcii" /> <a href=""> Projekcii™ </a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/WPico.jpg" alt="ícone do whatsapp" title="Whatsapp da Projekcii" /> <a href=""> Projekcii™ </a>
+                </li>
+            </ul>
+            <ul id="criador">
+                <li>
+                    <h3>Conheça quem nos criou:</h3>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/IGico.jpg" alt="ícone do instagram"
+                        title="Instagram dos Criadores" /> <a href="https://www.instagram.com/carol.r.arangues/"
+                        target="_blank"> Carol.R.Arangues</a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/GHico.png" alt="ícone do github" title="Github dos Criadores" />
+                    <a href="https://github.com/Carol-Rodrigues" target="_blank"> Carol-Rodrigues</a>
+                </li>
+                <li>
+                    <img class="logo" src="imagens/LIico.png" alt="ícone do linkedin" title="LinkedIn dos Criadores" />
+                    <a href="https://www.linkedin.com/in/carolina-arangues/" target="_blank"> Carolina-Arangues</a>
+                </li>
+            </ul>
+            <ul class="ico_footer">
+                <figure>
+                    <img id="footer_ico_01" src="imagens/ico_footer_01.PNG" alt="Prêmio Reclame Aqui 2021" />
+                </figure>
+                <figure>
+                    <img id="footer_ico_02" src="imagens/ico_footer_03.PNG" alt="Prêmio Ebit 2021" />
+                </figure>
+                <figure>
+                    <img id="footer_ico_03" src="imagens/ico_footer_02.PNG" alt="Compra Segura" />
+                </figure>
+            </ul>
+            <ul id="outros">
+                <li>
+                    <a href="index.html" target="_blank"> Home</a>
+                 </li>
+                <li>
+                   <a href=""> Carreiras</a>
+                </li>
+                <li>
+                    <a href=""> Termos</a>
+                </li>
+                <li>
+                    <a href=""> Política de Privacidade</a>
+                </li>
+            </ul>
+        </nav>
+        <p id="footer">Projekcii™ - todos os direitos reservados.</p>
     </footer>
 </body>
 
